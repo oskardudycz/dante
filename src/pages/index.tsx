@@ -1,18 +1,33 @@
 import * as React from 'react';
-import type { HeadFC } from 'gatsby';
+import { graphql, HeadFC, PageProps } from 'gatsby';
+import { loadStripe, RedirectToCheckoutOptions } from '@stripe/stripe-js';
+
+type StripeCheckoutOptions = {
+  publishableKey: string;
+  productPriceId: string;
+};
+
+const redirectToCheckout =
+  ({ publishableKey, productPriceId }: StripeCheckoutOptions) =>
+  async () => {
+    const productToCheckout = { price: productPriceId, quantity: 3 };
+
+    const checkoutOptions: RedirectToCheckoutOptions = {
+      mode: 'payment',
+      lineItems: [productToCheckout],
+      successUrl: `http://localhost:8000/`,
+      cancelUrl: `http://localhost:8000/`,
+    };
+
+    const stripe = await loadStripe(publishableKey);
+    const result = await stripe!.redirectToCheckout(checkoutOptions);
+    console.log('RESULT!' + JSON.stringify(result));
+  };
 
 const pageStyles = {
   color: '#232129',
   padding: 96,
   fontFamily: '-apple-system, Roboto, sans-serif, serif',
-};
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-};
-const headingAccentStyles = {
-  color: '#663399',
 };
 const paragraphStyles = {
   marginBottom: 48,
@@ -136,20 +151,31 @@ const links = [
   },
 ];
 
-const IndexPage = () => {
+type DataProps = {
+  site: {
+    siteMetadata: {
+      title: string;
+      stripe: StripeCheckoutOptions;
+    };
+  };
+};
+
+const IndexPage = ({
+  data: {
+    site: {
+      siteMetadata: { stripe },
+    },
+  },
+}: PageProps<DataProps>) => {
+  console.log(stripe);
+
   return (
     <main style={pageStyles}>
-      <h1 style={headingStyles}>
-        Congratulations
-        <br />
-        <span style={headingAccentStyles}>
-          — you just made a Gatsby site! 🎉🎉🎉
-        </span>
-      </h1>
-
       <h1 className="text-3xl font-bold underline text-slate-700 dark:text-slate-500">
         Hello world!
       </h1>
+      <button onClick={redirectToCheckout(stripe)}>Buy Water Bottle</button>
+
       <p style={paragraphStyles}>
         Edit <code style={codeStyles}>src/pages/index.tsx</code> to see this
         page update in real-time. 😎
@@ -197,3 +223,17 @@ const IndexPage = () => {
 export default IndexPage;
 
 export const Head: HeadFC = () => <title>Home Page</title>;
+
+export const query = graphql`
+  {
+    site {
+      siteMetadata {
+        title
+        stripe {
+          publishableKey
+          productPriceId
+        }
+      }
+    }
+  }
+`;
