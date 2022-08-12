@@ -8,8 +8,10 @@ const config: GatsbyConfig = {
     title: `dante`,
     siteUrl: `https://www.yourdomain.tld`,
     stripe: {
-      publishableKey: process.env.STRIPE_PUBLISHABLE_KEY,
-      productPriceId: process.env.STRIPE_PRODUCT_PRICE_ID,
+      publishableKey:
+        process.env.STRIPE_PUBLISHABLE_KEY ?? 'Dummy publishableKey',
+      productPriceId:
+        process.env.STRIPE_PRODUCT_PRICE_ID ?? 'Dummy productPriceId',
     },
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
