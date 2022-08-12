@@ -1,0 +1,26 @@
+{
+    "parser": "@typescript-eslint/parser",
+    "plugins": ["@typescript-eslint"],
+    "rules": {
+      "@typescript-eslint/rule-name": "error",
+      "no-unused-vars": "off",
+      "@typescript-eslint/no-unused-vars": [
+        "error",
+        { "varsIgnorePattern": "^_", "argsIgnorePattern": "^_" }
+      ]
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/recommended-requiring-type-checking",
+        "plugin:prettier/recommended",
+        "plugin:mdx/recommended"
+    ],
+    "settings": {
+      "mdx/code-blocks": true,
+      // optional, if you want to disable language mapper, set it to `false`
+      // if you want to override the default language mapper inside, you can provide your own
+      "mdx/language-mapper": {}
+    }
+  }
+  

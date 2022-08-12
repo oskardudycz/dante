@@ -947,14 +947,6 @@ type GatsbyImagePlaceholder =
   | 'none'
   | 'tracedSVG';
 
-type HeadingsMdx =
-  | 'h1'
-  | 'h2'
-  | 'h3'
-  | 'h4'
-  | 'h5'
-  | 'h6';
-
 type ImageCropFocus =
   | 17
   | 0
@@ -1749,33 +1741,17 @@ type MarkdownWordCountFilterInput = {
 };
 
 type Mdx = Node & {
-  readonly body: Scalars['String'];
   readonly children: ReadonlyArray<Node>;
-  readonly excerpt: Scalars['String'];
-  readonly fileAbsolutePath: Scalars['String'];
-  readonly frontmatter: Maybe<MdxFrontmatter>;
-  readonly headings: Maybe<ReadonlyArray<Maybe<MdxHeadingMdx>>>;
-  readonly html: Maybe<Scalars['String']>;
+  readonly excerpt: Maybe<Scalars['String']>;
   readonly id: Scalars['ID'];
   readonly internal: Internal;
-  readonly mdxAST: Maybe<Scalars['JSON']>;
   readonly parent: Maybe<Node>;
-  readonly rawBody: Scalars['String'];
-  readonly slug: Maybe<Scalars['String']>;
   readonly tableOfContents: Maybe<Scalars['JSON']>;
-  readonly timeToRead: Maybe<Scalars['Int']>;
-  readonly wordCount: Maybe<MdxWordCount>;
 };
 
 
 type Mdx_excerptArgs = {
   pruneLength?: InputMaybe<Scalars['Int']>;
-  truncate?: InputMaybe<Scalars['Boolean']>;
-};
-
-
-type Mdx_headingsArgs = {
-  depth: InputMaybe<HeadingsMdx>;
 };
 
 
@@ -1829,7 +1805,6 @@ type MdxEdge = {
 };
 
 type MdxFieldsEnum =
-  | 'body'
   | 'children'
   | 'children.children'
   | 'children.children.children'
@@ -1870,12 +1845,6 @@ type MdxFieldsEnum =
   | 'children.parent.parent.children'
   | 'children.parent.parent.id'
   | 'excerpt'
-  | 'fileAbsolutePath'
-  | 'frontmatter.title'
-  | 'headings'
-  | 'headings.depth'
-  | 'headings.value'
-  | 'html'
   | 'id'
   | 'internal.content'
   | 'internal.contentDigest'
@@ -1885,7 +1854,6 @@ type MdxFieldsEnum =
   | 'internal.mediaType'
   | 'internal.owner'
   | 'internal.type'
-  | 'mdxAST'
   | 'parent.children'
   | 'parent.children.children'
   | 'parent.children.children.children'
@@ -1924,39 +1892,15 @@ type MdxFieldsEnum =
   | 'parent.parent.internal.type'
   | 'parent.parent.parent.children'
   | 'parent.parent.parent.id'
-  | 'rawBody'
-  | 'slug'
-  | 'tableOfContents'
-  | 'timeToRead'
-  | 'wordCount.paragraphs'
-  | 'wordCount.sentences'
-  | 'wordCount.words';
+  | 'tableOfContents';
 
 type MdxFilterInput = {
-  readonly body: InputMaybe<StringQueryOperatorInput>;
   readonly children: InputMaybe<NodeFilterListInput>;
   readonly excerpt: InputMaybe<StringQueryOperatorInput>;
-  readonly fileAbsolutePath: InputMaybe<StringQueryOperatorInput>;
-  readonly frontmatter: InputMaybe<MdxFrontmatterFilterInput>;
-  readonly headings: InputMaybe<MdxHeadingMdxFilterListInput>;
-  readonly html: InputMaybe<StringQueryOperatorInput>;
   readonly id: InputMaybe<StringQueryOperatorInput>;
   readonly internal: InputMaybe<InternalFilterInput>;
-  readonly mdxAST: InputMaybe<JSONQueryOperatorInput>;
   readonly parent: InputMaybe<NodeFilterInput>;
-  readonly rawBody: InputMaybe<StringQueryOperatorInput>;
-  readonly slug: InputMaybe<StringQueryOperatorInput>;
   readonly tableOfContents: InputMaybe<JSONQueryOperatorInput>;
-  readonly timeToRead: InputMaybe<IntQueryOperatorInput>;
-  readonly wordCount: InputMaybe<MdxWordCountFilterInput>;
-};
-
-type MdxFrontmatter = {
-  readonly title: Scalars['String'];
-};
-
-type MdxFrontmatterFilterInput = {
-  readonly title: InputMaybe<StringQueryOperatorInput>;
 };
 
 type MdxGroupConnection = {
@@ -2000,35 +1944,9 @@ type MdxGroupConnection_sumArgs = {
   field: MdxFieldsEnum;
 };
 
-type MdxHeadingMdx = {
-  readonly depth: Maybe<Scalars['Int']>;
-  readonly value: Maybe<Scalars['String']>;
-};
-
-type MdxHeadingMdxFilterInput = {
-  readonly depth: InputMaybe<IntQueryOperatorInput>;
-  readonly value: InputMaybe<StringQueryOperatorInput>;
-};
-
-type MdxHeadingMdxFilterListInput = {
-  readonly elemMatch: InputMaybe<MdxHeadingMdxFilterInput>;
-};
-
 type MdxSortInput = {
   readonly fields: InputMaybe<ReadonlyArray<InputMaybe<MdxFieldsEnum>>>;
   readonly order: InputMaybe<ReadonlyArray<InputMaybe<SortOrderEnum>>>;
-};
-
-type MdxWordCount = {
-  readonly paragraphs: Maybe<Scalars['Int']>;
-  readonly sentences: Maybe<Scalars['Int']>;
-  readonly words: Maybe<Scalars['Int']>;
-};
-
-type MdxWordCountFilterInput = {
-  readonly paragraphs: InputMaybe<IntQueryOperatorInput>;
-  readonly sentences: InputMaybe<IntQueryOperatorInput>;
-  readonly words: InputMaybe<IntQueryOperatorInput>;
 };
 
 /** Node Interface */
@@ -2302,22 +2220,12 @@ type Query_markdownRemarkArgs = {
 
 
 type Query_mdxArgs = {
-  body: InputMaybe<StringQueryOperatorInput>;
   children: InputMaybe<NodeFilterListInput>;
   excerpt: InputMaybe<StringQueryOperatorInput>;
-  fileAbsolutePath: InputMaybe<StringQueryOperatorInput>;
-  frontmatter: InputMaybe<MdxFrontmatterFilterInput>;
-  headings: InputMaybe<MdxHeadingMdxFilterListInput>;
-  html: InputMaybe<StringQueryOperatorInput>;
   id: InputMaybe<StringQueryOperatorInput>;
   internal: InputMaybe<InternalFilterInput>;
-  mdxAST: InputMaybe<JSONQueryOperatorInput>;
   parent: InputMaybe<NodeFilterInput>;
-  rawBody: InputMaybe<StringQueryOperatorInput>;
-  slug: InputMaybe<StringQueryOperatorInput>;
   tableOfContents: InputMaybe<JSONQueryOperatorInput>;
-  timeToRead: InputMaybe<IntQueryOperatorInput>;
-  wordCount: InputMaybe<MdxWordCountFilterInput>;
 };
 
 
