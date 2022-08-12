@@ -7,3 +7,6 @@ dist/*coverage/*
 
 # custom definition files
 /src/types/
+
+.cache
+/.cache/
