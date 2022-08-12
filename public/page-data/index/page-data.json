@@ -1,1 +1,19 @@
-{"componentChunkName":"component---src-pages-index-tsx","path":"/","result":{"data":{"site":{"siteMetadata":{"title":"dante","stripe":{"publishableKey":"pk_test_51K0OaQIq8kF5sDNr5trUYlqONBjIswamkMC7P2Ah0ES3UmVXDAcvUy20GFMkVc0yf30lrTwBdNfP8X1bpq73UF5h008Vgh5GzQ","productPriceId":"price_1LVzllIq8kF5sDNrj69FgoiO"}}}},"pageContext":{}},"staticQueryHashes":[]}
+{
+  "componentChunkName": "component---src-pages-index-tsx",
+  "path": "/",
+  "result": {
+    "data": {
+      "site": {
+        "siteMetadata": {
+          "title": "dante",
+          "stripe": {
+            "publishableKey": "pk_test_51K0OaQIq8kF5sDNr5trUYlqONBjIswamkMC7P2Ah0ES3UmVXDAcvUy20GFMkVc0yf30lrTwBdNfP8X1bpq73UF5h008Vgh5GzQ",
+            "productPriceId": "price_1LVzllIq8kF5sDNrj69FgoiO"
+          }
+        }
+      }
+    },
+    "pageContext": {}
+  },
+  "staticQueryHashes": []
+}

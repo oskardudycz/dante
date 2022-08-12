@@ -31,10 +31,10 @@ jobs:
           node-version: ${{ matrix.node-version }}
       # install dependencies
       - run: npm install
+      # lint
+      - run: npm run lint
       # build
       - run: npm run build
-      # build
-      - run: npm run lint
         env:
           STRIPE_PUBLISHABLE_KEY: ${{ secrets.STRIPE_PUBLISHABLE_KEY }}
           STRIPE_PRODUCT_PRICE_ID: ${{ secrets.STRIPE_PRODUCT_PRICE_ID }}
