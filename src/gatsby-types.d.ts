@@ -2670,6 +2670,8 @@ type SiteFieldsEnum =
   | 'port'
   | 'siteMetadata.description'
   | 'siteMetadata.siteUrl'
+  | 'siteMetadata.stripe.productPriceId'
+  | 'siteMetadata.stripe.publishableKey'
   | 'siteMetadata.title'
   | 'trailingSlash';
 
@@ -3435,13 +3437,25 @@ type SitePluginSortInput = {
 type SiteSiteMetadata = {
   readonly description: Maybe<Scalars['String']>;
   readonly siteUrl: Maybe<Scalars['String']>;
+  readonly stripe: Maybe<SiteSiteMetadataStripe>;
   readonly title: Maybe<Scalars['String']>;
 };
 
 type SiteSiteMetadataFilterInput = {
   readonly description: InputMaybe<StringQueryOperatorInput>;
   readonly siteUrl: InputMaybe<StringQueryOperatorInput>;
+  readonly stripe: InputMaybe<SiteSiteMetadataStripeFilterInput>;
   readonly title: InputMaybe<StringQueryOperatorInput>;
+};
+
+type SiteSiteMetadataStripe = {
+  readonly productPriceId: Maybe<Scalars['String']>;
+  readonly publishableKey: Maybe<Scalars['String']>;
+};
+
+type SiteSiteMetadataStripeFilterInput = {
+  readonly productPriceId: InputMaybe<StringQueryOperatorInput>;
+  readonly publishableKey: InputMaybe<StringQueryOperatorInput>;
 };
 
 type SiteSortInput = {
