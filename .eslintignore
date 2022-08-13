@@ -9,5 +9,7 @@ dist/*coverage/*
 /src/types/
 
 /.cache/
+/.netlify/
+/public/
 
 !.eslintrc.js
