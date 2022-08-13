@@ -9,3 +9,5 @@ dist/*coverage/*
 /src/types/
 
 /.cache/
+
+!.eslintrc.js

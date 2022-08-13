@@ -8,7 +8,10 @@ type StripeCheckoutOptions = {
 };
 
 const redirectToCheckout =
-  ({ publishableKey, productPriceId }: StripeCheckoutOptions) =>
+  ({
+    publishableKey,
+    productPriceId,
+  }: StripeCheckoutOptions): (() => Promise<void>) =>
   async () => {
     const productToCheckout = { price: productPriceId, quantity: 3 };
 
@@ -99,7 +102,7 @@ const badgeStyle = {
   borderRadius: 4,
   padding: '4px 6px',
   display: 'inline-block',
-  position: 'relative' as 'relative',
+  position: 'relative' as const,
   top: -2,
   marginLeft: 10,
   lineHeight: 1,
@@ -174,7 +177,7 @@ const IndexPage = ({
       <h1 className="text-3xl font-bold underline text-slate-700 dark:text-slate-500">
         Hello world!
       </h1>
-      <button onClick={redirectToCheckout(stripe)}>Buy Water Bottle</button>
+      <button onClick={() => redirectToCheckout(stripe)}>Buy Product!</button>
 
       <p style={paragraphStyles}>
         Edit <code style={codeStyles}>src/pages/index.tsx</code> to see this
@@ -225,7 +228,7 @@ export default IndexPage;
 export const Head: HeadFC = () => <title>Home Page</title>;
 
 export const query = graphql`
-  {
+  query SiteMetadata {
     site {
       siteMetadata {
         title
