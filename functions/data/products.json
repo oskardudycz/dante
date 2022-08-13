@@ -1,0 +1,24 @@
+[
+  {
+    "sku": "001",
+    "name": "Brownie",
+    "description": "She is adorable, child like. The cover photo is by Dorota Dylka from Unsplash.",
+    "image": {
+      "url": "https://res.cloudinary.com/atapas/image/upload/v1604912361/cats/dorota-dylka-_VX-6amHgDY-unsplash_th9hg9.jpg",
+      "key": "brownie.jpg"
+    },
+    "amount": 2200,
+    "currency": "USD"
+  },
+  {
+    "sku": "002",
+    "name": "Flur",
+    "description": "Flur is a Queen. The cover photo is by Milada Vigerova from Unsplash.",
+    "image": {
+      "url": "https://res.cloudinary.com/atapas/image/upload/v1604829841/cats/milada-vigerova-7E9qvMOsZEM-unsplash_etgmbe.jpg",
+      "key": "flur.jpg"
+    },
+    "amount": 2000,
+    "currency": "USD"
+  }
+]

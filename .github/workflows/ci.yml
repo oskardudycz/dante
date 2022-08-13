@@ -30,9 +30,7 @@ jobs:
           # use the node version defined in matrix above
           node-version: ${{ matrix.node-version }}
       # install dependencies
-      - run: npm install
-      # lint
-      - run: npm run lint
+      - run: npm ci
       # build
       - run: npm run build
         env:
@@ -40,6 +38,8 @@ jobs:
           STRIPE_PRODUCT_PRICE_ID: ${{ secrets.STRIPE_PRODUCT_PRICE_ID }}
           GATSBY_STRIPE_PUBLISHABLE_KEY: ${{ secrets.STRIPE_PUBLISHABLE_KEY }}
           GATSBY_STRIPE_PRODUCT_PRICE_ID: ${{ secrets.STRIPE_PRODUCT_PRICE_ID }}
+      # lint
+      - run: npm run lint
       - name: Build & Deploy docs preview
         run: npm run deploy
         if: ${{ github.ref != 'refs/heads/main' }}
