@@ -54,16 +54,6 @@ npm run clean
 
 ## Useful links
 
-### GatsbyJS
-
-- [TypeScript and Gatsby](https://www.gatsbyjs.com/docs/how-to/custom-configuration/typescript/)
-- [Install Tailwind CSS with Gatsby](https://tailwindcss.com/docs/guides/gatsby)
-- [Documentation](https://www.gatsbyjs.com/docs/)
-- [Tutorials](https://www.gatsbyjs.com/tutorial/)
-- [API Reference](https://www.gatsbyjs.com/docs/api-reference/)
-- [Plugin Library](https://www.gatsbyjs.com/plugins)
-- [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/)
-
 ### Stripe
 
 - [Stripe Payment Element](https://stripe.com/docs/payments/payment-element)
@@ -74,16 +64,32 @@ npm run clean
 - [How to create a Jamstack pet store app using Stripe, Gatsbyjs, and Netlify functions](https://blog.greenroots.info/how-to-create-a-jamstack-pet-store-app-using-stripe-gatsbyjs-and-netlify-functions)
 - [Building a Serverless E-commerce Store with Stripe, Netlify, & 11ty](https://sia.codes/posts/serverless-ecommerce-store/)
 
+### Netlify
+
+- [Netlify Functions docs](https://docs.netlify.com/functions/build/?fn-language=ts)
+- [Serverless Functions and TypeScript on Netlify (with Tomasz Łakomy) — Learn With Jason](https://www.youtube.com/watch?v=Tgyi4H6BcI4)
+
+### GatsbyJS
+
+- [TypeScript and Gatsby](https://www.gatsbyjs.com/docs/how-to/custom-configuration/typescript/)
+- [Install Tailwind CSS with Gatsby](https://tailwindcss.com/docs/guides/gatsby)
+- [Documentation](https://www.gatsbyjs.com/docs/)
+- [Tutorials](https://www.gatsbyjs.com/tutorial/)
+- [API Reference](https://www.gatsbyjs.com/docs/api-reference/)
+- [Plugin Library](https://www.gatsbyjs.com/plugins)
+- [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/)
+
+## E-Commerce
+
+- [React Shopping Cart](https://github.com/jeffersonRibeiro/react-shopping-cart)
+
 ### API
+
 - [axios-hooks - React hooks for axios, with built-in support for server side rendering.](https://www.npmjs.com/package/axios-hooks)
 - [Integrating Axios with React Hooks](https://blog.openreplay.com/integrating-axios-with-react-hooks)
 - [How to use async functions in useEffect (with examples)](https://devtrium.com/posts/async-functions-useeffect)
 - [Make an Http request on click in React](https://bobbyhadz.com/blog/react-send-request-on-click)
 
 ### Google Analytics
+
 - [PartyTown - Run Third-Party Scripts From A Web Worker](https://partytown.builder.io/gatsby)
-
-### Netlify
-
-- [Netlify Functions docs](https://docs.netlify.com/functions/build/?fn-language=ts)
-- [Serverless Functions and TypeScript on Netlify (with Tomasz Łakomy) — Learn With Jason](https://www.youtube.com/watch?v=Tgyi4H6BcI4)
