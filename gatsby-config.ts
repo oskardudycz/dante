@@ -20,12 +20,6 @@ const config: GatsbyConfig = {
   graphqlTypegen: true,
   plugins: [
     'gatsby-plugin-postcss',
-    // {
-    //   resolve: 'gatsby-plugin-google-analytics',
-    //   options: {
-    //     "trackingId": ""
-    //   }
-    // },
     'gatsby-plugin-image',
     'gatsby-plugin-sitemap',
     {

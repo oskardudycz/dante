@@ -3,12 +3,10 @@ import { loadStripe, RedirectToCheckoutOptions } from '@stripe/stripe-js';
 import axios from 'axios';
 
 type ProductsProps = {
-  stripe: StripeCheckoutOptions;
-};
-
-type StripeCheckoutOptions = {
-  publishableKey: string;
-  productPriceId: string;
+  stripe: {
+    publishableKey: string;
+    productPriceId: string;
+  };
 };
 
 type Product = {
@@ -32,7 +30,7 @@ const Products = ({
 
   useEffect(() => {
     axios
-      .get<Product[]>('http://localhost:8888/api/get-products')
+      .get<Product[]>('/api/get-products')
       .then((result) => {
         if (result.status !== 200) {
           console.error('Error loading shopnotes');
