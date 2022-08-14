@@ -91,11 +91,6 @@ const Products = () => {
         <div className="products">
           {products.map((product) => (
             <div className="product" key={`${product.sku}-image`}>
-              {/* <Image
-                fileName={product.image.key}
-                style={{ width: '100%' }}
-                alt={product.name}
-              /> */}
               <h2>{product.name}</h2>
               <p className="description">{product.description}</p>
               <p className="price">
