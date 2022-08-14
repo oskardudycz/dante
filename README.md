@@ -57,6 +57,7 @@ npm run clean
 ### Stripe
 
 - [Stripe Payment Element](https://stripe.com/docs/payments/payment-element)
+- [Testing](https://stripe.com/docs/testing)
 - [Orders overview](https://stripe.com/docs/orders)
 - [Integrating Stripe with Polish payment gateways](https://www.youtube.com/watch?v=c4DvnfVSW3A)
 - [Quickstart: Gatsby Stripe Checkout 2021](https://medium.com/@developer-junaid/quickstart-gatsby-stripe-checkout-a661dde1a98c)
@@ -93,3 +94,7 @@ npm run clean
 ### Google Analytics
 
 - [PartyTown - Run Third-Party Scripts From A Web Worker](https://partytown.builder.io/gatsby)
+
+### CI
+
+- [Gatsby Incremental Builds and Github Actions](https://www.raulmelo.dev/blog/cache-gatsby-github-actions)
