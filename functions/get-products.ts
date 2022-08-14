@@ -1,19 +1,10 @@
 import { Handler } from '@netlify/functions';
-import products from './data/products.json';
+import { Handle, success } from './core/handlers';
+import { getProductsWithPrices } from './products';
 
-const headers = {
-  /* Required for CORS support to work */
-  'Access-Control-Allow-Origin': 'http://localhost:8000',
-  /* Required for cookies, authorization headers with HTTPS */
-  'Access-Control-Allow-Credentials': true,
-};
-
-const handler: Handler = () => {
-  return Promise.resolve({
-    statusCode: 200,
-    headers,
-    body: JSON.stringify(products),
-  });
-};
+const handler: Handler = Handle(async () => {
+  const response = await getProductsWithPrices();
+  return success(response);
+});
 
 export { handler };

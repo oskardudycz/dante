@@ -3518,7 +3518,7 @@ type GatsbyImageSharpFluidLimitPresentationSizeFragment = { readonly maxHeight: 
 type SiteMetadataQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-type SiteMetadataQuery = { readonly site: { readonly siteMetadata: { readonly title: string | null, readonly stripe: { readonly publishableKey: string | null, readonly productPriceId: string | null } | null } | null } | null };
+type SiteMetadataQuery = { readonly site: { readonly siteMetadata: { readonly title: string | null } | null } | null };
 
 
 }

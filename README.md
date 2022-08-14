@@ -67,11 +67,21 @@ npm run clean
 ### Stripe
 
 - [Stripe Payment Element](https://stripe.com/docs/payments/payment-element)
+- [Orders overview](https://stripe.com/docs/orders)
 - [Integrating Stripe with Polish payment gateways](https://www.youtube.com/watch?v=c4DvnfVSW3A)
 - [Quickstart: Gatsby Stripe Checkout 2021](https://medium.com/@developer-junaid/quickstart-gatsby-stripe-checkout-a661dde1a98c)
 - [Digital Wallet payments with React Stripe Elements and Netlify Functions](https://github.com/stripe-samples/react-elements-netlify-serverless)
 - [How to create a Jamstack pet store app using Stripe, Gatsbyjs, and Netlify functions](https://blog.greenroots.info/how-to-create-a-jamstack-pet-store-app-using-stripe-gatsbyjs-and-netlify-functions)
 - [Building a Serverless E-commerce Store with Stripe, Netlify, & 11ty](https://sia.codes/posts/serverless-ecommerce-store/)
+
+### API
+- [axios-hooks - React hooks for axios, with built-in support for server side rendering.](https://www.npmjs.com/package/axios-hooks)
+- [Integrating Axios with React Hooks](https://blog.openreplay.com/integrating-axios-with-react-hooks)
+- [How to use async functions in useEffect (with examples)](https://devtrium.com/posts/async-functions-useeffect)
+- [Make an Http request on click in React](https://bobbyhadz.com/blog/react-send-request-on-click)
+
+### Google Analytics
+- [PartyTown - Run Third-Party Scripts From A Web Worker](https://partytown.builder.io/gatsby)
 
 ### Netlify
 

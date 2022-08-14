@@ -31,7 +31,7 @@ const IndexPage = ({
         Dante's Shop
       </h1>
 
-      <Products stripe={stripe} />
+      <Products />
     </main>
   );
 };
@@ -45,10 +45,6 @@ export const query = graphql`
     site {
       siteMetadata {
         title
-        stripe {
-          publishableKey
-          productPriceId
-        }
       }
     }
   }
