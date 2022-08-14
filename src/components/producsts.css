@@ -1,0 +1,61 @@
+header {
+  background: #ff8c00;
+  padding: 1rem 2.5vw;
+  font-size: 35px;
+}
+
+header a {
+  color: white;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+main {
+  margin: 2rem 2rem 2rem 2rem;
+  width: 90vw;
+}
+
+.products {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 3rem;
+}
+
+.product img {
+  max-width: 100%;
+}
+
+.product button {
+  background: #ff8c00;
+  border: none;
+  border-radius: 0.25rem;
+  color: white;
+  font-size: 1.25rem;
+  font-weight: 800;
+  line-height: 1.25rem;
+  padding: 0.25rem;
+  cursor: pointer;
+}
+
+.cart {
+  position: absolute;
+  display: block;
+  width: 48px;
+  height: 48px;
+  top: 100px;
+  right: 40px;
+  cursor: pointer;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -11px;
+  right: -13px;
+  background-color: #ff6600;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 5px 14px;
+  border-radius: 19px;
+}
