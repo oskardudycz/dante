@@ -98,3 +98,5 @@ npm run clean
 ### CI
 
 - [Gatsby Incremental Builds and Github Actions](https://www.raulmelo.dev/blog/cache-gatsby-github-actions)
+- [Super fast npm install on Github Actions](https://www.voorhoede.nl/en/blog/super-fast-npm-install-on-github-actions/)
+- [Caching dependencies to speed up workflows](https://docs.github.com/en/actions/using-workflows/caching-dependencies-to-speed-up-workflows)
