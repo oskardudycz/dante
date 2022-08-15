@@ -95,8 +95,13 @@ npm run clean
 
 - [PartyTown - Run Third-Party Scripts From A Web Worker](https://partytown.builder.io/gatsby)
 
-### CI
+### DevOps
 
 - [Gatsby Incremental Builds and Github Actions](https://www.raulmelo.dev/blog/cache-gatsby-github-actions)
 - [Super fast npm install on Github Actions](https://www.voorhoede.nl/en/blog/super-fast-npm-install-on-github-actions/)
 - [Caching dependencies to speed up workflows](https://docs.github.com/en/actions/using-workflows/caching-dependencies-to-speed-up-workflows)
+- [Create a site from a template using the Netlify CLI](https://www.netlify.com/blog/create-a-site-from-a-template-using-the-netlify-cli/)
+
+### CMS
+
+- [How to render a static html page in ReactJS?](https://stackoverflow.com/a/65464471/10966454)
