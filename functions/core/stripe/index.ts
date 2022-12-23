@@ -6,5 +6,5 @@ export const publishableKey =
   process.env.STRIPE_PUBLISHABLE_KEY ?? 'Dummy publishableKey';
 
 export const stripe = new Stripe(process.env.STRIPE_SECRET_KEY || 'dummy key', {
-  apiVersion: '2022-08-01',
+  apiVersion: '2022-11-15',
 });
