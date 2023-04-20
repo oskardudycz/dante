@@ -40,7 +40,7 @@
     "gatsby-plugin-image": "3.3.2",
     "gatsby-plugin-manifest": "5.3.1",
     "gatsby-plugin-mdx": "5.3.1",
-    "gatsby-plugin-sharp": "5.3.2",
+    "gatsby-plugin-sharp": "5.8.1",
     "gatsby-plugin-sitemap": "6.3.1",
     "gatsby-source-filesystem": "5.3.1",
     "gatsby-transformer-remark": "6.3.2",
